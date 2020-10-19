@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\MessageClient;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +17,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/','home')->name('home');
-Route::view('/cliente','cliente')->name('cliente');
+//Route::view('/cliente','cliente')->name('cliente');
 
-Route::post('cliente',[\App\Http\Controllers\MessageClient::class, 'store']);
+Route::post('/cliente',[MessageClient::class, 'store'])->name('cliente.store');
+
+Route::get('/cliente',[ClienteController::class, 'index'])->name('cliente.index');
+
+Route::get('/cliente/{IdCliente}',[ClienteController::class, 'show'])->name('cliente.show');
+
+
 
 Route::view('/factura','factura')->name('factura');
 

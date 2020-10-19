@@ -6,33 +6,33 @@
       <div class="row contact-wrap">
         <div class="col-md-8 col-md-offset-2">
           
-          <form  method="POST" {{ route('cliente') }}>
+          <form  method="POST" action="{{ route('cliente.store') }}">
           @csrf
             <div class="form-group">
-                <input name="codigo" type="text" class="form-control" placeholder="Codigo" />
+                <input name="IdLCliente" type="text" class="form-control" placeholder="Codigo" />
             </div>
 
             <div class="form-group">
-                <input name="nombre" type="text" class="form-control" placeholder="Nombre" >
+                <input name="Nombre" type="text" class="form-control" placeholder="Nombre" >
             </div>
 
             <div class="form-group">
-                <input name="apellido" type="text" class="form-control" placeholder="Apellido" >
+                <input name="Apellido" type="text" class="form-control" placeholder="Apellido" >
             </div>
 
             <div class="form-group">
-                <input name="cedula" type="text" class="form-control" placeholder="Cedula"> 
+                <input name="Cedula" type="text" class="form-control" placeholder="Cedula"> 
             </div>
 
             <div class="form-group">
-                <input name="telefono" type="number" class="form-control" placeholder="Telefono" >
+                <input name="Telefono" type="number" class="form-control" placeholder="Telefono" >
             </div>
 
             <div class="form-group">
-                <textarea name="direccion" class="form-control" placeholder="Direccion" ></textarea>
+                <textarea name="Direccion" class="form-control" placeholder="Direccion" ></textarea>
             </div>
             <div class="form-group">
-                <input name="email" type="email" class="form-control" placeholder="Email"/>
+                <input name="Email" type="email" class="form-control" placeholder="Email"/>
             </div>
             
             <div id="boton_form_client">
